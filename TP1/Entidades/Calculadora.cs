@@ -4,6 +4,7 @@ namespace Entidades
 {
     public static class Calculadora
     {
+
         #region metodos
         public static double Operar(Operando num1, Operando num2, char operador)
         {
@@ -53,5 +54,6 @@ namespace Entidades
             return retorno;
         }
         #endregion
+
     }
 }

@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Operando
     {
+
         #region atributos
         private double numero;
         #endregion
@@ -144,23 +145,36 @@ namespace Entidades
         #region sobrecarga de operadores
         public static double operator - (Operando n1, Operando n2)
         {
-            return 0;
+            return n1.numero - n2.numero;
         }
 
         public static double operator * (Operando n1, Operando n2)
         {
-            return 0;
+            return n1.numero * n2.numero;
         }
 
         public static double operator / (Operando n1, Operando n2)
         {
-            return 0;
+            double resultado;
+
+            if(n2.numero == 0)
+            {
+                resultado = double.MinValue;
+            }
+            else
+            {
+                resultado = n1 / n2;
+            }
+
+            return resultado;
         }
 
         public static double operator + (Operando n1, Operando n2)
         {
-            return 0;
+            return n1.numero + n2.numero;
         }
         #endregion
+
     }
 }
+sdf
