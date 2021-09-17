@@ -88,7 +88,7 @@ namespace Entidades
         public string DecimalBinario (string numero)
         {
             double numeroRetorno;
-            string retorno = "Valor Invalido";
+            string retorno = "Valor inválido";
 
             if(Double.TryParse(numero, out numeroRetorno))
             {

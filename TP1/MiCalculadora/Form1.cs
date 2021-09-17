@@ -45,6 +45,32 @@ namespace MiCalculadora
             e.Handled = true;
         }
 
+        private void txtNumero1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void txtNumero2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro de salir?", "Atención",
@@ -69,6 +95,7 @@ namespace MiCalculadora
             string num1;
             string num2;
             string operacion;
+            string historial = "";
             
             num1 = this.txtNumero1.Text;
             num2 = this.txtNumero2.Text;
@@ -77,19 +104,40 @@ namespace MiCalculadora
             resultado = (FormCalculadora.Operar(num1, num2, operacion)).ToString();
 
             this.lblResultado.Text = resultado;
+
+            if (!String.IsNullOrEmpty(operacion))
+            {
+                historial = num1 + " " + operacion + " " + num2 + " = " + resultado;
+                lstOperaciones.Items.Add(historial);
+            }
+
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
+            Operando resultado;
+            string numDecimal;
+
+            resultado = new Operando();
+            numDecimal = this.lblResultado.Text;
+
+            this.lblResultado.Text = resultado.DecimalBinario(numDecimal);
 
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
+            Operando resultado;
+            string numDecimal;
+
+            resultado = new Operando();
+            numDecimal = this.lblResultado.Text;
+
+            this.lblResultado.Text = resultado.BinarioDecimal(numDecimal);
 
         }
 
-        public void Limpiar()
+        private void Limpiar()
         {
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
@@ -97,7 +145,7 @@ namespace MiCalculadora
             this.lblResultado.Text = "0";
         }
 
-        public static double Operar(string numero1, string numero2, string operador)
+        private static double Operar(string numero1, string numero2, string operador)
         {
             Operando num1;
             Operando num2;
@@ -107,10 +155,11 @@ namespace MiCalculadora
             {
                 num1 = new Operando(numero1);
                 num2 = new Operando(numero2);
-                resultado = Calculadora.Operar(num1, num2, operador[0]);
+                resultado = Calculadora.Operar(num1, num2, char.Parse(operador));
             }
 
             return resultado;
         }
+
     }
 }
