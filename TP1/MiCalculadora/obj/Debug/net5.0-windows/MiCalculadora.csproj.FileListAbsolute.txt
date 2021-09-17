@@ -16,3 +16,6 @@ C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_labor
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FormCalculadora.resources
+C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete

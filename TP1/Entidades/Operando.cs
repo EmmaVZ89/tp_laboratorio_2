@@ -163,7 +163,7 @@ namespace Entidades
             }
             else
             {
-                resultado = n1 / n2;
+                resultado = n1.numero / n2.numero;
             }
 
             return resultado;
@@ -177,4 +177,3 @@ namespace Entidades
 
     }
 }
-sdf
