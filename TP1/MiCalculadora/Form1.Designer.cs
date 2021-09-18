@@ -50,7 +50,6 @@ namespace MiCalculadora
             this.txtNumero1.Size = new System.Drawing.Size(172, 55);
             this.txtNumero1.TabIndex = 0;
             this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumero1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero1_KeyPress);
             // 
             // txtNumero2
             // 
@@ -61,7 +60,6 @@ namespace MiCalculadora
             this.txtNumero2.Size = new System.Drawing.Size(172, 55);
             this.txtNumero2.TabIndex = 2;
             this.txtNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumero2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero2_KeyPress);
             // 
             // cmbOperador
             // 

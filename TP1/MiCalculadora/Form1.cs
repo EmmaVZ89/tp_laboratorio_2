@@ -45,32 +45,6 @@ namespace MiCalculadora
             e.Handled = true;
         }
 
-        private void txtNumero1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-
-        }
-
-        private void txtNumero2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro de salir?", "Atención",
@@ -92,49 +66,75 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             string resultado;
-            string num1;
-            string num2;
+            double num1;
+            double num2;
             string operacion;
             string historial = "";
             
-            num1 = this.txtNumero1.Text;
-            num2 = this.txtNumero2.Text;
-            operacion = this.cmbOperador.SelectedItem.ToString();
 
-            resultado = (FormCalculadora.Operar(num1, num2, operacion)).ToString();
-
-            this.lblResultado.Text = resultado;
-
-            if (!String.IsNullOrEmpty(operacion))
+            if(Double.TryParse(this.txtNumero1.Text, out num1) && Double.TryParse(this.txtNumero2.Text, out num2))
             {
-                historial = num1 + " " + operacion + " " + num2 + " = " + resultado;
-                lstOperaciones.Items.Add(historial);
-            }
+                operacion = this.cmbOperador.SelectedItem.ToString();
+                resultado = (FormCalculadora.Operar(num1.ToString(), num2.ToString(), operacion)).ToString();
 
+                this.lblResultado.Text = resultado;
+
+                if (!String.IsNullOrEmpty(operacion))
+                {
+                    historial = num1 + " " + operacion + " " + num2 + " = " + resultado;
+                    lstOperaciones.Items.Add(historial);
+                }
+            }
+            else
+            {
+                DialogResult rta = MessageBox.Show("Debe ingresar caracteres numericos", "Atención",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Limpiar();
+            }
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Operando resultado;
-            string numDecimal;
+            string strNumero;
+            double decNumero;
 
-            resultado = new Operando();
-            numDecimal = this.lblResultado.Text;
-
-            this.lblResultado.Text = resultado.DecimalBinario(numDecimal);
-
+            if(Double.TryParse(this.lblResultado.Text, out decNumero))
+            {
+                resultado = new Operando();
+                strNumero = this.lblResultado.Text;
+                if (decNumero >= 0)
+                {
+                    this.lblResultado.Text = resultado.DecimalBinario(strNumero);
+                }
+                else
+                {
+                    DialogResult rta = MessageBox.Show(resultado.DecimalBinario(strNumero), "Atención",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Operando resultado;
-            string numDecimal;
+            string strNumero;
+            string retorno;
+            double aux;
 
             resultado = new Operando();
-            numDecimal = this.lblResultado.Text;
+            strNumero = this.lblResultado.Text;
+            retorno = resultado.BinarioDecimal(strNumero);
 
-            this.lblResultado.Text = resultado.BinarioDecimal(numDecimal);
-
+            if (Double.TryParse(retorno, out aux))
+            {
+                this.lblResultado.Text = retorno;
+            }
+            else
+            {
+                DialogResult rta = MessageBox.Show(retorno, "Atención",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Limpiar()
