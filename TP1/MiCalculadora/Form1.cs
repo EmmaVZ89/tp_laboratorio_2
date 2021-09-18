@@ -13,6 +13,9 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
+        /// <summary>
+        /// Inicializa el formulario
+        /// </summary>
         public FormCalculadora()
         {
             InitializeComponent();
@@ -23,6 +26,11 @@ namespace MiCalculadora
             this.Limpiar();
         }
 
+        /// <summary>
+        /// cierra el formulario, antes pidiendo al usuario una confirmacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro de salir?", "Atención",
@@ -40,11 +48,21 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// evita que el usuario escriba en el Combo Box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbOperacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
 
+        /// <summary>
+        /// cierra el formulario, antes pidiendo al usuario una confirmacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro de salir?", "Atención",
@@ -55,14 +73,25 @@ namespace MiCalculadora
             {
                 this.Close();
             }
-            
+
         }
 
+        /// <summary>
+        /// elimina el contenido de los controles txtNumero1.Text, txtNumero2.Text, cmbOperador.Text y lblResultado.Text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.Limpiar();
         }
 
+        /// <summary>
+        /// realiza las operaciones matematicas, segun lo que el usuario halla ingresado en los controles
+        /// txtNumero1.Text, txtNumero2.Text y cmbOperador.Text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
             string resultado;
@@ -87,12 +116,17 @@ namespace MiCalculadora
             }
             else
             {
-                DialogResult rta = MessageBox.Show("Debe ingresar caracteres numericos", "Atención",
+                DialogResult rta = MessageBox.Show("Se deben ingresar números", "Atención",
                                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Limpiar();
             }
         }
 
+        /// <summary>
+        /// convierte el resultado de una operacion en binario, en caso de que sea posible.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Operando resultado;
@@ -115,6 +149,11 @@ namespace MiCalculadora
             }
         }
 
+        /// <summary>
+        /// convierte el resultado de una operacion en decimal, en caso de que sea posible
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Operando resultado;
@@ -137,6 +176,9 @@ namespace MiCalculadora
             }
         }
 
+        /// <summary>
+        /// elimina el contenido de los controles txtNumero1.Text, txtNumero2.Text, cmbOperador.Text y lblResultado.Text
+        /// </summary>
         private void Limpiar()
         {
             this.txtNumero1.Text = "";
@@ -145,6 +187,13 @@ namespace MiCalculadora
             this.lblResultado.Text = "0";
         }
 
+        /// <summary>
+        /// realiza las operaciones matematicas, segun lo que el usuario halla ingresado en los controles
+        /// </summary>
+        /// <param name="numero1"> primer cadena con un numero</param>
+        /// <param name="numero2"> segunda cadena con un numero</param>
+        /// <param name="operador">cadena con el operando</param>
+        /// <returns> si se puedo realizar la operacion retorna el resultado, sino retorna 0</returns>
         private static double Operar(string numero1, string numero2, string operador)
         {
             Operando num1;
