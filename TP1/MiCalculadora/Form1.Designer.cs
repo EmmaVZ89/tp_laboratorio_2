@@ -79,52 +79,94 @@ namespace MiCalculadora
             // 
             // btnOperar
             // 
+            this.btnOperar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOperar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOperar.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnOperar.FlatAppearance.BorderSize = 5;
+            this.btnOperar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnOperar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnOperar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOperar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOperar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnOperar.Location = new System.Drawing.Point(12, 213);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(160, 71);
             this.btnOperar.TabIndex = 3;
             this.btnOperar.Text = "Operar";
-            this.btnOperar.UseVisualStyleBackColor = true;
+            this.btnOperar.UseVisualStyleBackColor = false;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLimpiar.FlatAppearance.BorderSize = 5;
+            this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLimpiar.Location = new System.Drawing.Point(187, 213);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(178, 71);
             this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnCerrar.FlatAppearance.BorderSize = 5;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrar.Location = new System.Drawing.Point(380, 213);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(161, 71);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnConvertirABinario
             // 
+            this.btnConvertirABinario.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConvertirABinario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConvertirABinario.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnConvertirABinario.FlatAppearance.BorderSize = 5;
+            this.btnConvertirABinario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnConvertirABinario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnConvertirABinario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConvertirABinario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConvertirABinario.Location = new System.Drawing.Point(12, 323);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(260, 71);
             this.btnConvertirABinario.TabIndex = 6;
             this.btnConvertirABinario.Text = "Convertir a Binario";
-            this.btnConvertirABinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.UseVisualStyleBackColor = false;
             this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
             // 
             // btnConvertirADecimal
             // 
+            this.btnConvertirADecimal.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConvertirADecimal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConvertirADecimal.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnConvertirADecimal.FlatAppearance.BorderSize = 5;
+            this.btnConvertirADecimal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnConvertirADecimal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnConvertirADecimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConvertirADecimal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConvertirADecimal.Location = new System.Drawing.Point(287, 323);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(254, 71);
             this.btnConvertirADecimal.TabIndex = 7;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
-            this.btnConvertirADecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirADecimal.UseVisualStyleBackColor = false;
             this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
             // 
             // lstOperaciones
@@ -140,6 +182,7 @@ namespace MiCalculadora
             // lblResultado
             // 
             this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblResultado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblResultado.Location = new System.Drawing.Point(12, 22);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -152,6 +195,7 @@ namespace MiCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lstOperaciones);
@@ -163,7 +207,8 @@ namespace MiCalculadora
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
