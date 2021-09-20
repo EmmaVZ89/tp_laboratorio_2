@@ -103,7 +103,7 @@ namespace MiCalculadora
 
             if(Double.TryParse(this.txtNumero1.Text, out num1) && Double.TryParse(this.txtNumero2.Text, out num2))
             {
-                if(this.cmbOperador.SelectedIndex == 0)
+                if(this.cmbOperador.SelectedIndex == 0 || this.cmbOperador.SelectedItem == null)
                 {
                     operacion = "+";
                 }
