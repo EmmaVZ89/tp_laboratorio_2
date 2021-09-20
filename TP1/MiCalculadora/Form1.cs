@@ -27,7 +27,7 @@ namespace MiCalculadora
         }
 
         /// <summary>
-        /// cierra el formulario, antes pidiendo al usuario una confirmacion...
+        /// cierra el formulario, antes pidiendo al usuario una confirmacion.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
