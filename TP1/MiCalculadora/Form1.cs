@@ -97,15 +97,22 @@ namespace MiCalculadora
             string resultado;
             double num1;
             double num2;
-            string operacion;
+            string operacion = "";
             string historial = "";
             
 
             if(Double.TryParse(this.txtNumero1.Text, out num1) && Double.TryParse(this.txtNumero2.Text, out num2))
             {
-                operacion = this.cmbOperador.SelectedItem.ToString();
-                resultado = (FormCalculadora.Operar(num1.ToString(), num2.ToString(), operacion)).ToString();
+                if(this.cmbOperador.SelectedIndex == 0)
+                {
+                    operacion = "+";
+                }
+                else
+                {
+                    operacion = this.cmbOperador.SelectedItem.ToString();
+                }
 
+                resultado = (FormCalculadora.Operar(num1.ToString(), num2.ToString(), operacion)).ToString();
                 this.lblResultado.Text = resultado;
 
                 if (!String.IsNullOrEmpty(operacion))
@@ -183,7 +190,7 @@ namespace MiCalculadora
         {
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
-            this.cmbOperador.Text = "";
+            this.cmbOperador.SelectedIndex = 0;
             this.lblResultado.Text = "0";
         }
 
@@ -204,7 +211,7 @@ namespace MiCalculadora
             {
                 num1 = new Operando(numero1);
                 num2 = new Operando(numero2);
-                resultado = Calculadora.Operar(num1, num2, char.Parse(operador));
+                resultado = Calculadora.Operar(num1, num2, operador[0]);
             }
 
             return resultado;
