@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Suv
+    /// <summary>
+    /// La clase Suv deriva de la clase Vehiculo
+    /// </summary>
+    public class Suv : Vehiculo // se agrego : Vehiculo 
     {
         public Suv(EMarca marca, string chasis, ConsoleColor color)
             : base(chasis, marca, color)
@@ -15,25 +18,29 @@ namespace Entidades
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
-        protected override short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
-                return 0;
+                return ETamanio.Grande;
             }
         }
 
+        /// <summary>
+        /// Publica todos los datos del SUV
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SUV");
-            sb.AppendLine(base);
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
+            sb.AppendLine(base.Mostrar()); // se reutiliza el metodo Mostrar de base
+            sb.AppendLine("TAMAÑO : " + this.Tamanio.ToString());
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
-            return sb;
+            return sb.ToString(); // convierto el sb en una string
         }
     }
 }
