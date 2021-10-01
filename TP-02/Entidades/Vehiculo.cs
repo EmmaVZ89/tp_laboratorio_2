@@ -55,7 +55,7 @@ namespace Entidades
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna una string con todos los datos de un vehiculo</returns>
         virtual public string Mostrar() // agregue modificador virtual y public
         {
             StringBuilder sb = new StringBuilder();
@@ -65,7 +65,7 @@ namespace Entidades
             sb.AppendLine($"COLOR : {this.color.ToString()}");
             sb.AppendLine("---------------------");
             sb.AppendLine("");
-            sb.AppendLine($"TAMAÑO : {this.Tamanio.ToString()}"); // agregue la propiedad Tamanio para luego reutilizar el codigo
+            sb.Append($"TAMAÑO : {this.Tamanio.ToString()}"); // agregue la propiedad Tamanio para luego reutilizar el codigo
 
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace Entidades
         /// <summary>
         /// Publica todos los datos del Vehiculo si se castea explicitamente a string
         /// </summary>
-        /// <param name="p"></param>
+        /// <param name="p">una instancia de un elemento tipo Vehiculo</param>
         public static explicit operator string(Vehiculo p) // cambio de modificador private por public
         {
             // elimine todo el codigo y reutilice el metodo Mostrar
@@ -81,11 +81,11 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Dos vehiculos son iguales si comparten el mismo chasis
+        /// Determina si dos vehiculos son iguales. Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <param name="v1">una instancia de un elemento tipo Vehiculo</param>
+        /// <param name="v2">una instancia de un elemento tipo Vehiculo</param>
+        /// <returns>retorna true si los vehiculos son iguales, de lo contrario retorna false</returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
             // elimine el codigo completo y use una variable intermedia para el retorno
@@ -99,11 +99,11 @@ namespace Entidades
             return retorno;
         }
         /// <summary>
-        /// Dos vehiculos son distintos si su chasis es distinto
+        /// Determina si dos vehiculos son distintos. Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <param name="v1">una instancia de un elemento tipo Vehiculo</param>
+        /// <param name="v2">una instancia de un elemento tipo Vehiculo</param>
+        /// <returns>retorna false si los vehiculos son iguales, de lo contrario retorna true</returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
             return !(v1 == v2); // reutilizacion del operador == negando el retorno.
