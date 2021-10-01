@@ -11,10 +11,6 @@ namespace Entidades
     /// </summary>
     public class Suv : Vehiculo // se agrego : Vehiculo 
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
-        {
-        }
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
@@ -27,7 +23,18 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Publica todos los datos del SUV
+        /// Permite que se instancien elementos del tipo Suv
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Suv(EMarca marca, string chasis, ConsoleColor color)
+            : base(chasis, marca, color)
+        {
+        }
+
+        /// <summary>
+        /// Publica todos los datos de un elemento del tipo SUV
         /// </summary>
         /// <returns></returns>
         public override sealed string Mostrar()
@@ -36,8 +43,6 @@ namespace Entidades
 
             sb.AppendLine("SUV");
             sb.AppendLine(base.Mostrar()); // se reutiliza el metodo Mostrar de base
-            sb.AppendLine("TAMAÑO : " + this.Tamanio.ToString());
-            sb.AppendLine("");
             sb.AppendLine("---------------------");
 
             return sb.ToString(); // convierto el sb en una string

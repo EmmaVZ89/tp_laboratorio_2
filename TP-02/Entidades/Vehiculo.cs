@@ -64,6 +64,8 @@ namespace Entidades
             sb.AppendLine($"MARCA : {this.marca.ToString()}");
             sb.AppendLine($"COLOR : {this.color.ToString()}");
             sb.AppendLine("---------------------");
+            sb.AppendLine("");
+            sb.AppendLine($"TAMAÑO : {this.Tamanio.ToString()}"); // agregue la propiedad Tamanio para luego reutilizar el codigo
 
             return sb.ToString();
         }
@@ -86,9 +88,10 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
+            // elimine el codigo completo y use una variable intermedia para el retorno
             bool retorno = false;
 
-            if(String.Compare(v1.chasis, v2.chasis) == 0) // elimine el codigo completo y use una variable intermedia para el retorno
+            if(String.Compare(v1.chasis, v2.chasis) == 0) 
             {
                 retorno = true;
             }

@@ -15,11 +15,11 @@ namespace Entidades
         /// <summary>
         /// Ciclomotor son 'Chico'
         /// </summary>
-        protected short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
-                return 0;
+                return ETamanio.Chico;
             }
         }
 

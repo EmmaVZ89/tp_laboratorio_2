@@ -8,46 +8,70 @@ using System.Drawing;
 
 namespace Entidades
 {
-    class Sedan : Vehiculo
+    /// <summary>
+    /// La clase Sedan deriva de la clase Vehiculo
+    /// </summary>
+    public class Sedan : Vehiculo
     {
-        public enum ETipo { CuatroPuertas, CincoPuertas }
-        ETipo tipo;
+        public enum ETipo 
+        {
+            CuatroPuertas,
+            CincoPuertas
+        }
+
+        private ETipo tipo; // agregue modificador private
 
         /// <summary>
-        /// Por defecto, TIPO será CuatroPuertas
+        /// Sedan son 'Mediano'
+        /// </summary>
+        protected override ETamanio Tamanio
+        {
+            get
+            {
+                return ETamanio.Mediano;
+            }
+        }
+
+        /// <summary>
+        /// Por defecto, TIPO será CuatroPuertas. Permite que se instancien elementos del tipo Sedan
         /// </summary>
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
         /// <param name="color"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+            : this(marca, chasis, color, ETipo.CuatroPuertas) // utilizo la sobrecarga y le asigno un valor por defecto al tipo
         {
-            tipo = ETipo.CuatroPuertas;
         }
 
         /// <summary>
-        /// Sedan son 'Mediano'
+        /// Permite que se instancien elementos del tipo Sedan 
         /// </summary>
-        protected override short Tamanio
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        /// <param name="tipo"></param>
+        public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
+            : base(chasis, marca, color)
         {
-            get
-            {
-                return this.Tamanio;
-            }
+            this.tipo = tipo;
         }
 
+
+        /// <summary>
+        /// Publica todos los datos de un elemento del tipo Sedan
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.AppendLine(this);
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-            sb.AppendLine("TIPO : " + this.tipo);
+            sb.AppendLine(base.Mostrar()); // se reutiliza el metodo Mostrar de base
+            sb.Append($"TIPO : {this.tipo}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
-            return sb;
+            return sb.ToString(); // convierto el sb en una string
         }
     }
 }
