@@ -21,12 +21,20 @@ namespace Entidades
             {
                 return this.telefono;
             }
+            set
+            {
+                this.telefono = value;
+            }
         }
         public double Peso
         {
             get
             {
                 return this.peso;
+            }
+            set
+            {
+                this.peso = value;
             }
         }
         public double Altura
@@ -35,6 +43,10 @@ namespace Entidades
             {
                 return this.altura;
             }
+            set
+            {
+                this.altura = value;
+            }
         }
         public double Imc
         {
@@ -42,6 +54,10 @@ namespace Entidades
             {
                 return this.imc;
             } 
+            set
+            {
+                this.imc = value;
+            }
         }
         public EComposicionCorporal ComposicionCorporal
         {
@@ -49,12 +65,20 @@ namespace Entidades
             {
                 return this.composicionCorporal;
             }
+            set
+            {
+                this.composicionCorporal = value;
+            }
         }
         public EGradoObesidad GradoObesidad
         {
             get
             {
                 return this.gradoObesidad;
+            }
+            set
+            {
+                this.gradoObesidad = value;
             }
         }
 
@@ -78,9 +102,12 @@ namespace Entidades
         public static bool operator == (Contacto c1, Contacto c2)
         {
             bool retorno = false;
-            if(c1.nombre == c2.nombre && c1.telefono == c2.telefono)
+            if(c1 is not null && c2 is not null)
             {
-                retorno = true;
+                if (c1.nombre == c2.nombre && c1.telefono == c2.telefono)
+                {
+                    retorno = true;
+                }
             }
             return retorno;
         }
@@ -95,12 +122,12 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.Append(base.ToString());
-            sb.AppendLine($"Telefono: {this.telefono}");
-            sb.AppendLine($"Peso: {this.peso} Kg");
-            sb.AppendLine($"Altura: {this.altura} Mt");
-            sb.AppendLine($"IMC: {this.imc}");
-            sb.AppendLine($"Composision corporal: {this.composicionCorporal}");
-            sb.AppendLine($"Grado de obesidad: {this.gradoObesidad}");
+            sb.Append($"- {this.telefono} - ");
+            sb.Append($"{this.peso} Kg - ");
+            sb.Append($"{this.altura} Mt - ");
+            sb.Append($"IMC: {this.imc} - ");
+            sb.Append($"{this.composicionCorporal} - ");
+            sb.Append($"{this.gradoObesidad} ");
 
             return sb.ToString();
         }

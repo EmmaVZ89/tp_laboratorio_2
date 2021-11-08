@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{4FF4390D-050F-4CE3-AA00-E6439B9D6764}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{4FF4390D-050F-4CE3-AA00-E6439B9D6764}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaVista", "AgendaSaludable\AgendaVista.csproj", "{06BEBA92-B985-4482-A160-BFBC675900A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BEBA92-B985-4482-A160-BFBC675900A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BEBA92-B985-4482-A160-BFBC675900A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BEBA92-B985-4482-A160-BFBC675900A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BEBA92-B985-4482-A160-BFBC675900A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

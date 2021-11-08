@@ -70,9 +70,9 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.Append(base.ToString());
-            sb.AppendLine($"DNI: {this.dni}");
-            sb.AppendLine($"E-mail: {this.email}");
-            sb.AppendLine($"Plan: {this.plan}");
+            sb.Append($"- {this.dni} - ");
+            sb.Append($"{this.email} - ");
+            sb.Append($"{this.plan} - ");
 
             return sb.ToString();
         }

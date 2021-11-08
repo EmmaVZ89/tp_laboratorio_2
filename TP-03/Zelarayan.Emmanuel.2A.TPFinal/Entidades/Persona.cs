@@ -15,6 +15,10 @@ namespace Entidades
             {
                 return this.nombre;
             }
+            set
+            {
+                this.nombre = value;
+            }
         }
         public int Edad
         {
@@ -22,12 +26,20 @@ namespace Entidades
             {
                 return this.edad;
             }
+            set
+            {
+                this.edad = value;
+            }
         }
         public string Sexo
         {
             get
             {
                 return this.sexo;
+            }
+            set
+            {
+                this.sexo = value;
             }
         }
 
@@ -42,9 +54,9 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Nombre: {this.nombre}");
-            sb.AppendLine($"Edad: {this.edad} años");
-            sb.AppendLine($"Sexo: {this.sexo}");
+            sb.Append($"{this.nombre} - ");
+            sb.Append($"{this.edad} años - ");
+            sb.Append($"{this.sexo} ");
 
             return sb.ToString();
         }
