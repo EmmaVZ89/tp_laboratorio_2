@@ -82,6 +82,8 @@ namespace Entidades
             }
         }
 
+        public Contacto()
+        { }
         public Contacto(string nombre, int edad, string sexo)
                         : base(nombre, edad, sexo)
         {

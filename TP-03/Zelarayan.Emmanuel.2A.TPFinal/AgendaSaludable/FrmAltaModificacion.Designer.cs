@@ -214,7 +214,11 @@ namespace AgendaSaludable
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAltaModificacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaContacto";
             this.Load += new System.EventHandler(this.FrmAltaContacto_Load);
             this.ResumeLayout(false);

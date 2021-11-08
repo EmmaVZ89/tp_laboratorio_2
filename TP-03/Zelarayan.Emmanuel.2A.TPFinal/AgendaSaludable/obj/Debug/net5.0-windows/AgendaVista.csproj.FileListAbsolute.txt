@@ -20,3 +20,5 @@ C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_labor
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP-03\Zelarayan.Emmanuel.2A.TPFinal\AgendaSaludable\obj\Debug\net5.0-windows\ref\AgendaVista.dll
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP-03\Zelarayan.Emmanuel.2A.TPFinal\AgendaSaludable\obj\Debug\net5.0-windows\AgendaVista.pdb
 C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP-03\Zelarayan.Emmanuel.2A.TPFinal\AgendaSaludable\obj\Debug\net5.0-windows\AgendaVista.genruntimeconfig.cache
+C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP-03\Zelarayan.Emmanuel.2A.TPFinal\AgendaSaludable\obj\Debug\net5.0-windows\AgendaVista.FrmFicha.resources
+C:\Users\Note\Desktop\Proyectos\UTN\2do Cuatrimestre\Trabajos Practicos\tp_laboratorio_2\TP-03\Zelarayan.Emmanuel.2A.TPFinal\AgendaSaludable\obj\Debug\net5.0-windows\AgendaVista.Properties.Resources.resources

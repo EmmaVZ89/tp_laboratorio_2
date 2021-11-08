@@ -43,6 +43,8 @@ namespace Entidades
             }
         }
 
+        public Persona()
+        { }
         public Persona(string nombre, int edad, string sexo)
         {
             this.nombre = nombre;

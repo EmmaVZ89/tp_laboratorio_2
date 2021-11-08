@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{BCFDDD8B-D443-4908-8A0C-406FBADDCBE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaVista", "AgendaSaludable\AgendaVista.csproj", "{06BEBA92-B985-4482-A160-BFBC675900A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaVista", "AgendaSaludable\AgendaVista.csproj", "{06BEBA92-B985-4482-A160-BFBC675900A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitariosArchivos", "TestUnitariosArchivos\TestUnitariosArchivos.csproj", "{9C15087C-BD54-428A-9AB3-AED53AF740F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{06BEBA92-B985-4482-A160-BFBC675900A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BEBA92-B985-4482-A160-BFBC675900A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BEBA92-B985-4482-A160-BFBC675900A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C15087C-BD54-428A-9AB3-AED53AF740F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C15087C-BD54-428A-9AB3-AED53AF740F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C15087C-BD54-428A-9AB3-AED53AF740F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C15087C-BD54-428A-9AB3-AED53AF740F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

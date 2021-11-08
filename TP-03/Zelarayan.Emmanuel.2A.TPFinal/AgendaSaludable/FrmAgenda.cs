@@ -8,16 +8,81 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using AgendaVista;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace AgendaSaludable
 {
     public partial class FrmAgenda : Form
     {
+        private OpenFileDialog openFileDialog;
+        private SaveFileDialog saveFileDialog;
+        private static string archivo;
         AgendaSaludable<Contacto> contactosAgenda;
+
         public FrmAgenda()
         {
             InitializeComponent();
+            openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Archivo XML|*.xml";
+            saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo XML|*.xml";
             this.contactosAgenda = new AgendaSaludable<Contacto>();
+            string rutaEscritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string nombreArchivo = "datosContactos.xml";
+            FrmAgenda.archivo = Path.Combine(rutaEscritorio, nombreArchivo);
+        }
+
+        private string Archivo
+        {
+            get
+            {
+                return FrmAgenda.archivo;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    FrmAgenda.archivo = value;
+                }
+            }
+        }
+        private void FrmAgenda_Load(object sender, EventArgs e)
+        {
+            if (File.Exists(archivo))
+            {
+                this.RecuperarDatos();
+                this.ActualizarListBox();
+            }
+        }
+
+        private void btnAbrir_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FrmAgenda.archivo = openFileDialog.FileName;
+
+                try
+                {
+                    switch (Path.GetExtension(FrmAgenda.archivo))
+                    {
+                        case ".xml":
+                            this.RecuperarDatos();
+                            this.ActualizarListBox();
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MostrarError(ex);
+                }
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            this.GuardarDatos();
         }
 
         private void btnAgregarContacto_Click(object sender, EventArgs e)
@@ -70,6 +135,24 @@ namespace AgendaSaludable
             }
         }
 
+        private void btnFicha_Click(object sender, EventArgs e)
+        {
+            int indiceContacto = this.lstContactos.SelectedIndex;
+
+            if (indiceContacto != -1)
+            {
+                Contacto contactoFicha = this.contactosAgenda.ListaPersonas[indiceContacto];
+
+                FrmFicha contactoAMostrar = new FrmFicha(contactoFicha);
+
+                if (contactoAMostrar.ShowDialog() == DialogResult.OK)
+                {
+                    this.ActualizarListBox();
+                    MessageBox.Show("Contacto Modificado");
+                }
+            }
+
+        }
 
         private int ObtenerIndiceContactoSeleccionado()
         {
@@ -86,6 +169,33 @@ namespace AgendaSaludable
         {
             this.lstContactos.DataSource = null;
             this.lstContactos.DataSource = this.contactosAgenda.ListaPersonas;
+        }
+
+        private void RecuperarDatos()
+        {
+            using (StreamReader streamReader = new StreamReader(FrmAgenda.archivo))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(this.contactosAgenda.GetType());
+                this.contactosAgenda = xmlSerializer.Deserialize(streamReader) as AgendaSaludable<Contacto>;
+            }
+        }
+
+        private void GuardarDatos()
+        {
+            using (StreamWriter streamWriter = new StreamWriter(FrmAgenda.archivo))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(this.contactosAgenda.GetType());
+                xmlSerializer.Serialize(streamWriter, this.contactosAgenda);
+            }
+        }
+
+        private void MostrarError(Exception ex)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Error: {ex.Message}");
+            sb.AppendLine("Detalle:");
+            sb.AppendLine(ex.StackTrace);
+            MessageBox.Show(sb.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
     }

@@ -88,6 +88,7 @@ namespace AgendaSaludable
             this.btnAbrir.TabIndex = 4;
             this.btnAbrir.Text = "Abrir archivo";
             this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnGuardar
             // 
@@ -97,6 +98,7 @@ namespace AgendaSaludable
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnGuardarComo
             // 
@@ -132,6 +134,7 @@ namespace AgendaSaludable
             this.btnFicha.TabIndex = 9;
             this.btnFicha.Text = "Ver Ficha";
             this.btnFicha.UseVisualStyleBackColor = true;
+            this.btnFicha.Click += new System.EventHandler(this.btnFicha_Click);
             // 
             // FrmAgenda
             // 
@@ -148,8 +151,13 @@ namespace AgendaSaludable
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregarContacto);
             this.Controls.Add(this.lstContactos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAgenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda";
+            this.Load += new System.EventHandler(this.FrmAgenda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

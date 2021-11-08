@@ -88,6 +88,9 @@ namespace AgendaSaludable
                     this.nuevoContacto.Telefono = telefono;
                     this.nuevoContacto.Peso = peso;
                     this.nuevoContacto.Altura = altura;
+                    this.nuevoContacto.Imc = Math.Round(this.nuevoContacto.CalcularIMC());
+                    this.nuevoContacto.ComposicionCorporal = this.nuevoContacto.DeterminarComposicion(this.nuevoContacto.Imc);
+                    this.nuevoContacto.GradoObesidad = this.nuevoContacto.DeterminarGradoObesidad(this.nuevoContacto.ComposicionCorporal);
                 }
 
                 if (this.nuevoContacto != null)

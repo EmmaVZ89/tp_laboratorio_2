@@ -7,5 +7,8 @@
     <Compile Update="FrmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmFicha.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
