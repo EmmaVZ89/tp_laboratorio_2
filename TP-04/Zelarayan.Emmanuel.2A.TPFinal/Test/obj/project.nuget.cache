@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBCAhwMvTUnOrCJGJER7Fb8l9eVfi/tVhgLpYs9rlKwMEIJpIMLCsRQV+dPb8ItZR1Baag6cvQZzJD6m/vp/DQ==",
+  "dgSpecHash": "h9G/MJTOIZooi9OslBQHvvIook1tRHNOpleP1jPMqenPeOt6xY4YNL9IAUaApWdIVQdsByJsA9gvsRShsJaj3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Test\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Note\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Note\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

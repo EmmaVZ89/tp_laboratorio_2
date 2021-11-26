@@ -17,15 +17,7 @@ namespace AgendaVista
         Contacto contacto;
         private CancellationTokenSource cts;
         private List<Task> hilosBarras;
-        private static Random random;
 
-        /// <summary>
-        /// Constructor estatico de un FrmFicha
-        /// </summary>
-        static FrmFicha()
-        {
-            FrmFicha.random = new Random();
-        }
         /// <summary>
         /// Contructor por defecto de un FrmFicha
         /// </summary>
@@ -189,11 +181,8 @@ namespace AgendaVista
         {
             while (barraProgreso.Value < maximo && !cts.IsCancellationRequested)
             {
-                Thread.Sleep(random.Next(10, 50));
                 this.IncrementarBarraProgreso(barraProgreso);
             }
-            Thread.Sleep(3000);
-            this.FinalizarBarras();
         }
 
         /// <summary>
@@ -205,7 +194,6 @@ namespace AgendaVista
             int maximo = this.CalcularProgressBarComposicion();
             while (barraProgreso.Value < maximo && !cts.IsCancellationRequested)
             {
-                Thread.Sleep(random.Next(10, 50));
                 this.IncrementarBarraProgreso(barraProgreso);
                 this.MostrarMensajeObservacion(barraProgreso);
             }
@@ -237,7 +225,10 @@ namespace AgendaVista
             this.cts.Cancel();
         }
 
-
+        private void FrmFicha_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.FinalizarBarras();
+        }
     }
 }
 

@@ -478,11 +478,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\AgendaVista.csproj",
+      "projectUniqueName": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\AgendaVista.csproj",
       "projectName": "AgendaVista",
-      "projectPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\AgendaVista.csproj",
+      "projectPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\AgendaVista.csproj",
       "packagesPath": "C:\\Users\\Note\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\obj\\",
+      "outputPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\AgendaSaludable\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -503,8 +503,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\Entidades\\Entidades.csproj"
             }
           }
         }

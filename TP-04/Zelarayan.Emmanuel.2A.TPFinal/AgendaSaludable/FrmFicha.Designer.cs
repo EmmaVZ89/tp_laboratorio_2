@@ -217,6 +217,7 @@ namespace AgendaVista
             this.Name = "FrmFicha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ficha de Contacto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFicha_FormClosing);
             this.Load += new System.EventHandler(this.FrmFicha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

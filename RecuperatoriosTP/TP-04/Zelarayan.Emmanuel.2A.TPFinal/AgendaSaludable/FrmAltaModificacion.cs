@@ -106,29 +106,35 @@ namespace AgendaSaludable
             if (!(String.IsNullOrWhiteSpace(this.txtNombre.Text)) && int.TryParse(this.txtEdad.Text, out edad) && int.TryParse(this.txtTelefono.Text, out telefono) &&
                 Double.TryParse(this.txtPeso.Text, out peso) && Double.TryParse(this.txtAltura.Text, out altura))
             {
-                if (this.flagEsAlta)
+                if(edad > 15 && edad < 100 && peso > 30 && peso < 200 && altura >= 1 && altura < 2.5)
                 {
-                    this.nuevoContacto = new Contacto(this.txtNombre.Text, edad, this.cmbSexo.SelectedItem.ToString(),
-                    telefono, peso, altura);
+                    if (this.flagEsAlta)
+                    {
+                        this.nuevoContacto = new Contacto(this.txtNombre.Text, edad, this.cmbSexo.SelectedItem.ToString(),
+                        telefono, peso, altura);
+                    }
+                    else
+                    {
+                        this.nuevoContacto.Nombre = this.txtNombre.Text;
+                        this.nuevoContacto.Sexo = this.cmbSexo.SelectedItem.ToString();
+                        this.nuevoContacto.Edad = edad;
+                        this.nuevoContacto.Telefono = telefono;
+                        this.nuevoContacto.Peso = peso;
+                        this.nuevoContacto.Altura = altura;
+                        this.nuevoContacto.Imc = Math.Round(this.nuevoContacto.CalcularIMC());
+                        this.nuevoContacto.ComposicionCorporal = this.nuevoContacto.DeterminarComposicion(this.nuevoContacto.Imc);
+                        this.nuevoContacto.GradoObesidad = this.nuevoContacto.DeterminarGradoObesidad(this.nuevoContacto.ComposicionCorporal);
+                    }
+
+                    if (this.nuevoContacto != null)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
                 }
                 else
                 {
-                    this.nuevoContacto.Nombre = this.txtNombre.Text;
-                    this.nuevoContacto.Sexo = this.cmbSexo.SelectedItem.ToString();
-                    this.nuevoContacto.Edad = edad;
-                    this.nuevoContacto.Telefono = telefono;
-                    this.nuevoContacto.Peso = peso;
-                    this.nuevoContacto.Altura = altura;
-                    this.nuevoContacto.Imc = Math.Round(this.nuevoContacto.CalcularIMC());
-                    this.nuevoContacto.ComposicionCorporal = this.nuevoContacto.DeterminarComposicion(this.nuevoContacto.Imc);
-                    this.nuevoContacto.GradoObesidad = this.nuevoContacto.DeterminarGradoObesidad(this.nuevoContacto.ComposicionCorporal);
+                    MessageBox.Show("Valores fuera de rango.\nEdad: minino 15 años, maximo 100 años.\nPeso: minimo 30 kg, maximo 200 kg\nAltura: minimo 1 mt, maximo 2.5 mt");
                 }
-
-                if (this.nuevoContacto != null)
-                {
-                    this.DialogResult = DialogResult.OK;
-                }
-
             }
             else
             {

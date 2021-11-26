@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s8npaQ9AD/rfTrvj0dfYdtIBR53rphjitFco3vK+gs+7Oz7ob/w0VIohd2di+WYl/CiydMlU2dXLBCPbf8iKlg==",
+  "dgSpecHash": "o+IdUEDEo9xCbaBk4wcM7I7sIo3Ugd3p/ecDzb+0z1BmpeWWO7t565yYDwlcNTrhjx/bvlm6aF3HWnUsrI80Yg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\TestUnitariosContacto\\TestUnitariosContacto.csproj",
+  "projectFilePath": "C:\\Users\\Note\\Desktop\\Proyectos\\UTN\\2do Cuatrimestre\\Trabajos Practicos\\tp_laboratorio_2\\RecuperatoriosTP\\TP-04\\Zelarayan.Emmanuel.2A.TPFinal\\TestUnitariosContacto\\TestUnitariosContacto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Note\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Note\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
